@@ -1,7 +1,7 @@
 import './App.css';
 
 export const App = (props) => {
-  console.log({props});
+  console.log({ props });
   return (
     <div className="app">
       <p>{props.name}</p>
