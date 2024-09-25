@@ -4,4 +4,4 @@ import { App } from './App';
 const $root = document.querySelector('#root');
 const root = createRoot($root);
 
-root.render(<App name="Base React" age={55} />);
+root.render(<App name="React component examples"/>);
