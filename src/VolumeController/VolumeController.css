@@ -1,0 +1,48 @@
+.volume-controller {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgb(0, 238, 255);
+  padding: 20px;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.volume-bar {
+  display: flex;
+  gap: 5px;
+  margin: 10px 0;
+}
+
+.volume-bar-square {
+  width: 20px;
+  height: 20px;
+  background-color: lightgray;
+}
+
+.volume-bar-square.active {
+  background-color: rgb(138, 245, 16);
+}
+
+.volume-bar-square.red {
+  background-color: rgb(255, 0, 0);
+}
+
+.volume-bar-square.yellow {
+  background-color: rgb(255, 251, 0);
+}
+
+.volume-buttons-container {
+  display: flex;
+  gap: 10px;
+}
+
+.volume-button {
+  padding: 10px 20px;
+  font-size: 25px;
+  background-color: white;
+  border: 2px solid rgb(22, 70, 66);
+  color: red;
+  cursor: pointer;
+}
