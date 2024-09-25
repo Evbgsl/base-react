@@ -1,11 +1,12 @@
 import './App.css';
+import { VolumeController } from './VolumeController';
 
 export const App = (props) => {
   console.log({ props });
   return (
     <div className="app">
-      <p>{props.name}</p>
-      <p>{props.age}</p>
+      <h2>{props.name}</h2>
+      <VolumeController />
     </div>
   );
 };
