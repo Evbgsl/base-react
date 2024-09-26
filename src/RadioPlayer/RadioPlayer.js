@@ -1,22 +1,40 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import './RadioPlayer.css';
 
-export const RadioPlayer = ({ setVolume }) => {
+export const RadioPlayer = ({ volume, stationName, streamUrl, onPlay, isActive }) => {
   const audioRef = useRef(null);
-  const radioStreamUrl = 'https://pub0301.101.ru:8443/stream/air/mp3/256/219';
+  const [isPlaying, setIsPlaying] = useState(false);
 
-  const handleAudioVolumeChange = (newVolume) => {
-    if (audioRef.current) {
-      audioRef.current.volume = newVolume;
+  const togglePlay = () => {
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      onPlay(audioRef.current);
+      audioRef.current.play();
     }
+    setIsPlaying(!isPlaying);
   };
+
+  useEffect(() => {
+    if (!isActive && isPlaying) {
+      audioRef.current.pause();
+      setIsPlaying(false);
+    }
+  }, [isActive, isPlaying]);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = volume;
+    }
+  }, [volume]);
 
   return (
     <div className="radio-player">
-      <h3>LikeFM</h3>
-      <audio ref={audioRef} src={radioStreamUrl} controls/>
-
-      {setVolume(handleAudioVolumeChange)}
+      <h3>{stationName}</h3>
+      <audio ref={audioRef} src={streamUrl} />
+      <button className="play-button" onClick={togglePlay}>
+        {isPlaying ? 'Pause' : 'Play'}
+      </button>
     </div>
   );
 };
