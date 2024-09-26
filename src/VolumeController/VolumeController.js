@@ -1,7 +1,7 @@
 import './VolumeController.css';
 import React, { useState } from 'react';
 
-export const VolumeController = () => {
+export const VolumeController = ({ onVolumeChange }) => {
   const [level, setLevel] = useState(5);
   const [colorEffect, setColorEffect] = useState(null);
 
@@ -16,7 +16,9 @@ export const VolumeController = () => {
     if (level <= 1) {
       triggerColorEffect('yellow');
     } else {
-      setLevel(level - 1);
+      const newLevel = level - 1;
+      setLevel(newLevel);
+      onVolumeChange(newLevel / 10);
     }
   };
 
@@ -24,7 +26,9 @@ export const VolumeController = () => {
     if (level >= 10) {
       triggerColorEffect('red');
     } else {
-      setLevel(level + 1);
+      const newLevel = level + 1;
+      setLevel(newLevel);
+      onVolumeChange(newLevel / 10);
     }
   };
 
