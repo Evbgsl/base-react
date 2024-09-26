@@ -1,12 +1,10 @@
 .radio-player {
   display: flex;
-  flex-direction: row; /* Располагаем элементы по горизонтали */
-  align-items: center; /* Выровняем по вертикали */
+  flex-direction: row;
+  align-items: center;
   justify-content: center;
   border: 2px solid rgb(0, 238, 255);
   padding: 20px;
   margin: 0 auto;
   width: 300px;
 }
-
-

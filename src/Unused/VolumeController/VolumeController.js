@@ -39,7 +39,11 @@ export const VolumeController = ({ onVolumeChange }) => {
         {Array.from({ length: 10 }, (_, i) => (
           <div
             key={i}
-            className={`volume-bar-square ${colorEffect ? colorEffect : i < level ? 'active' : ''}`}
+            className={`volume-bar-square ${colorEffect
+              ? colorEffect
+              : i < level
+                ? 'active'
+                : ''}`}
           />
         ))}
       </div>
