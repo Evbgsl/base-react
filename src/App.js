@@ -23,7 +23,7 @@ export const App = (props) => {
       <h2>{props.name}</h2>
       <div className="counter">
         <h4>Counter</h4>
-        <input value={level} />
+        <input value={level} readOnly />
         <button onClick={handleCountDown}>
           -
         </button>
