@@ -5,7 +5,6 @@ import { RadioPlayer } from './RadioPlayer';
 
 export const App = (props) => {
   const [volume, setVolume] = useState(0.5);
-  const [activePlayer, setActivePlayer] = useState(null);
   const [activePlayerId, setActivePlayerId] = useState(null);
   const stations = [
     { id: 1, name: 'LikeFM', url: 'https://pub0301.101.ru:8443/stream/air/mp3/256/219' },
@@ -13,11 +12,7 @@ export const App = (props) => {
     { id: 3, name: 'Relax', url: 'https://pub0301.101.ru:8443/stream/air/mp3/256/200' },
   ];
 
-  const handlePlayerPlay = (audioRef, playerId) => {
-    if (activePlayer && activePlayer !== audioRef) {
-      activePlayer.pause();
-    }
-    setActivePlayer(audioRef);
+  const handlePlayerPlay = (playerId) => {
     setActivePlayerId(playerId);
   };
 
@@ -32,7 +27,7 @@ export const App = (props) => {
           stationName={station.name}
           streamUrl={station.url}
           isActive={activePlayerId === station.id}
-          onPlay={(audioRef) => handlePlayerPlay(audioRef, station.id)}
+          onPlay={() => handlePlayerPlay(station.id)}
         />
       ))}
 
