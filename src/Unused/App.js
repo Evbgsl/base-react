@@ -1,5 +1,6 @@
 import './App.css';
 import React, { useState } from 'react';
+import { YMaps, Map } from '@pbe/react-yandex-maps';
 import { VolumeController } from './VolumeController';
 import { RadioPlayer } from './RadioPlayer';
 
@@ -32,6 +33,12 @@ export const App = (props) => {
       ))}
 
       <VolumeController onVolumeChange={setVolume} />
+
+      <YMaps>
+        <div className="map-container">
+          <Map defaultState={{ center: [55.75, 37.57], zoom: 9 }} width="100%" height="100%" />
+        </div>
+      </YMaps>
     </div>
   );
 };
