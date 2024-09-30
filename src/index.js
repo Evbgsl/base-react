@@ -1,7 +1,8 @@
 import { createRoot } from 'react-dom/client';
-import { App } from './Unused/App';
+import { App } from './app';
 
 const $root = document.querySelector('#root');
-const root = createRoot($root);
-
-root.render(<App name="React component xmpls"/>);
+if ($root) {
+  const root = createRoot($root);
+  root.render(<App name={'React component xmpls'}/>);
+}
