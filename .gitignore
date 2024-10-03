@@ -2,6 +2,10 @@
 /_notes
 /_temp
 
+/.firebase
+firebase.json
+
+
 # dependencies
 /node_modules
 /.pnp
