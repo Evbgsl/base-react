@@ -5,5 +5,5 @@ import { App } from './App';
 const $root = document.querySelector('#root');
 if ($root) {
   const root = createRoot($root);
-  root.render(<App name='React exmpl' />);
+  root.render(<App title='React exmpl' />);
 }

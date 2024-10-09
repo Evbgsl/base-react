@@ -1,5 +1,5 @@
 export type CounterProps = {
-  minCount: number;
-  startCount: number;
-  maxCount: number;
+  name: string;
+  count: number;
+  setCount: (count: number) => void;
 };

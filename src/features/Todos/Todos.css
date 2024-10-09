@@ -1,0 +1,5 @@
+.todos {
+  display: grid;
+  grid-template-columns: repeat(5, 150px);
+  gap: 20px;
+}
