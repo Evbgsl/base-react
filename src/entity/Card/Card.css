@@ -1,0 +1,14 @@
+.card {
+  position: relative;
+  min-height: 150px;
+  min-width: 150px;
+}
+
+.card h2 {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 16px;
+}
