@@ -1,5 +1,4 @@
 import './PhotoGallery.css';
-
 import { Counter } from '../../features/';
 import { Photos } from '../../features/';
 
@@ -20,7 +19,7 @@ export const PhotoGallery = (props) => {
         count={props.count}
         setCount={props.setCount}
       />
-      <Photos photos={props.photos}/>
+      <Photos photos={props.photos} />
     </div>
   );
 };

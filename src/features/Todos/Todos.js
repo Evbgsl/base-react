@@ -18,7 +18,8 @@ export const Todos = (props) => {
         <Card key={todo.id}
           id={todo.id}
           name={todo.title}
-          text={todo.title}/>)
+          text={todo.title}
+        />)
       }
     </ul>
   );

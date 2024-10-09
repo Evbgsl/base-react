@@ -1,5 +1,4 @@
 import './TaskManager.css';
-
 import { Counter } from '../../features/';
 import { Todos } from '../../features/';
 
@@ -20,7 +19,7 @@ export const TaskManager = (props) => {
         count={props.count}
         setCount={props.setCount}
       />
-      <Todos todos={props.todos}/>
+      <Todos todos={props.todos} />
     </div>
   );
 };
