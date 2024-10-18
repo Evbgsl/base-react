@@ -24,13 +24,13 @@ export const Counter = (props) => {
     <div>
       <h2>{props.name}: {props.count}</h2>
       <button
-        onClick={HandlerDownClick}
+        onClick={handleDownClick}
         disabled = {props.count <= 1}
       >
         CountDown
       </button>
       <button
-        onClick={HandlerUpClick}
+        onClick={handleUpClick}
         disabled = {props.count >= 10}
       >
         CountUp
