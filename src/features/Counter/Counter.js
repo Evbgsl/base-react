@@ -15,7 +15,7 @@ export const Counter = (props) => {
     props.setCount(props.count - 1);
   };
 
-  const HandlerUpClick = () => {
+  const handleUpClick = () => {
     if (props.count >= 10) return;
     props.setCount(props.count + 1);
   };
