@@ -10,7 +10,7 @@
 
 export const Counter = (props) => {
 
-  const HandlerDownClick = () => {
+  const handleDownClick = () => {
     if (props.count <= 1) return;
     props.setCount(props.count - 1);
   };
