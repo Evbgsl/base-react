@@ -1,7 +1,6 @@
 import './PhotoGallery.css';
-import { Counter } from '../../features/';
-import { Photos } from '../../features/';
-
+import { Counter } from 'features';
+import { Photos } from 'features';
 /**
  * @typedef {import('./types').PhotoGalleryProps} PhotoGalleryProps
  */
