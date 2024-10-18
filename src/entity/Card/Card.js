@@ -1,6 +1,6 @@
 import './Card.css';
 import { useState, useEffect } from 'react';
-import { randomColor } from 'shared/lib';
+import { randomColor } from 'shared/utils';
 
 /**
  * @typedef {import('./types').CardProps} CardProps
