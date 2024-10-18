@@ -1,4 +1,4 @@
-import type { TodoDetails } from '../../features/Todos/types';
+import type { TodoDetails } from 'features/Todos/types';
 
 export type TaskManagerProps = {
   counterName: string;
