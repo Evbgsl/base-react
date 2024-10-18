@@ -1,6 +1,6 @@
 import './TaskManager.css';
-import { Counter } from '../../features/';
-import { Todos } from '../../features/';
+import { Counter } from 'features';
+import { Todos } from 'features';
 
 /**
  * @typedef {import('./types').TaskManagerProps} TaskManagerProps
